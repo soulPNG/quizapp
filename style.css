@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(93, 167, 93);
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around; 
+  width: 90%;
+}
+
+/* Existing CSS */
+
+.card {
+  height: 250px;
+  width: 150px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.front,
+.back {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-size: cover;
+}
+
+.card.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+  transform: rotateY(0deg);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
